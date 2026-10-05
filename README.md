@@ -30,5 +30,3 @@ Pharmacist: `demo` / `demo1234`
 2. In phpMyAdmin create a database named `pharmacy_db` and import `data/migrations/database.sql`.
 3. Check the settings in `data/config.php`.
 4. Open `http://localhost/PharmacyDisplaySystem/`.
-
-Team: Asma Alyahya, Layan Alotaibi, Atheer Alsif
