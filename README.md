@@ -2,8 +2,6 @@
 
 A role-based web app for managing a pharmacy's medicine list. Admins can add, edit and delete medicines; pharmacists can browse and view details.
 
-Built for the IT331 (Fundamentals of N-Tier Architectures) course at Imam Mohammad Ibn Saud Islamic University.
-
 ## Tech
 PHP (OOP, PDO) · MySQL · Stored Procedures · JavaScript · HTML · CSS
 
