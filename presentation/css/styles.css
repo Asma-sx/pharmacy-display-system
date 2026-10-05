@@ -1,0 +1,192 @@
+/* ================== Reset & Layout Base ================== */
+* { margin:0; padding:0; box-sizing:border-box; }
+html, body { height:100%; }
+body {
+  font-family: Arial, sans-serif;
+  background:#f5f6fa;
+  color:#222;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+.container { flex:1; }
+
+/* ================== Navbar ================== */
+nav{
+  width:100%;
+  background:#0d6efd;
+  padding:12px 25px;
+  display:flex;
+  gap:25px;
+}
+nav a{ color:#fff; text-decoration:none; font-size:17px; font-weight:bold; }
+nav a:hover{ text-decoration:underline; }
+
+/* ================== Page Content ================== */
+.container{ padding:40px; text-align:center; }
+h1,h2,h3,h4{ color:#222; }
+p{ color:#333; }
+
+/* ================== Buttons ================== */
+.btn{
+  background:#0d6efd;
+  color:#fff;
+  padding:10px 20px;
+  display:inline-block;
+  border-radius:6px;
+  text-decoration:none;
+  font-size:16px;
+  margin-top:15px;
+  border:none;
+  cursor:pointer;
+}
+.btn:hover{ background:#0b5ed7; }
+.btn.secondary{ background:#e6eef7; color:#0d6efd; border:1px solid #c9ddf3; }
+.btn.danger{ background:#dc3545; }
+.btn.danger:hover{ background:#b02a37; }
+
+/* ================== Footer (Sticky) ================== */
+footer{
+  background:transparent;
+  text-align:center;
+  padding:20px;
+  color:#777;
+  font-size:15px;
+  margin-top:auto;
+}
+
+/* ================== Cards (Light Theme Unified) ================== */
+.card{
+  background:#fff;
+  color:#222;
+  border:1px solid #e5e7eb;
+  border-radius:14px;
+  max-width:900px;
+  margin:0 auto 28px;
+  padding:26px 24px;
+  box-shadow:0 2px 8px rgba(0,0,0,.06);
+}
+.divider{ border:none; height:1px; background:#e5e7eb; margin:18px 0 14px; }
+
+/* ================== Forms ================== */
+form{ max-width:500px; margin:0 auto; text-align:left; }
+form label{ display:block; margin-bottom:6px; font-weight:bold; color:#222; }
+form input, form textarea, form select{
+  width:100%;
+  padding:10px;
+  margin-bottom:18px;
+  border:1px solid #ccc;
+  border-radius:6px;
+  font-size:15px;
+  background:#fff;
+  color:#333;
+}
+form .actions{ display:flex; gap:12px; flex-wrap:wrap; }
+
+/* Feedback boxes (login/register/confirmation) */
+.error-box{
+  background:#fdecec;
+  color:#9f1d1d;
+  border:1px solid #f3b4b4;
+  padding:10px;
+  border-radius:8px;
+}
+.ok-box{
+  background:#eaf8ee;
+  color:#157347;
+  border:1px solid #bde7c8;
+  padding:10px;
+  border-radius:8px;
+}
+
+/* ================== Medicines Grid ================== */
+.med-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+  gap:22px;
+  padding:10px;
+  text-align:left;
+}
+.med-card{
+  background:#fff;
+  border:1px solid #dce3ea;
+  border-radius:10px;
+  padding:18px;
+  box-shadow:0 2px 8px rgba(0,0,0,.06);
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  align-items:center;
+  text-align:center;
+}
+.med-card h3{ font-size:20px; color:#1E73BE; margin-bottom:6px; }
+.med-image{
+  width:100%;
+  height:180px;
+  object-fit:contain;
+  background:#f8f8f8;
+  border:1px solid #e1e1e1;
+  border-radius:8px;
+}
+.med-info p{ margin:4px 0; color:#333; font-size:14px; }
+
+/* ================== Details Page (Light, Unified) ================== */
+.details-container{ max-width:1000px; margin:0 auto; }
+.details-card{
+  background:#fff;
+  border:1px solid #e5e7eb;
+  border-radius:14px;
+  padding:22px;
+  box-shadow:0 2px 8px rgba(0,0,0,.06);
+  display:grid;
+  grid-template-columns: 340px 1fr;
+  gap:24px;
+  align-items:start;
+  text-align:left;
+}
+.details-img{
+  width:100%;
+  height:280px;
+  object-fit:contain;
+  background:#f8f8f8;
+  border:1px solid #e1e1e1;
+  border-radius:10px;
+}
+.details-info h3{ font-size:24px; margin-bottom:8px; color:#1E73BE; }
+.details-info h4{ font-size:16px; margin:14px 0 6px; color:#111; }
+.details-info p{ line-height:1.5; }
+
+/* Old page-title/kv (kept for compatibility if used) */
+.page-title{ font-size:34px; font-weight:800; margin:10px 0 22px; text-align:center; }
+.kv{ display:grid; grid-template-columns:1fr 1fr; gap:14px 28px; margin:10px 4px; }
+.kv.long{ grid-template-columns:1fr; }
+.kv dt{ font-weight:800; opacity:.95; }
+.kv dd{ margin-left:0; opacity:.95; }
+.kv>div{ display:grid; grid-template-columns:180px 1fr; gap:10px; align-items:start; }
+
+/* ================== Responsive ================== */
+@media (max-width: 900px){
+  .details-card{ grid-template-columns: 1fr; }
+  .details-img{ height:240px; }
+}
+@media (max-width:720px){
+  .kv{ grid-template-columns:1fr; }
+  .kv>div{ grid-template-columns:140px 1fr; }
+}
+/* Sticky Footer */
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1;
+}
+
+footer {
+  margin-top: auto;
+}
